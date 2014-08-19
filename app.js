@@ -24,7 +24,7 @@ $(document).ready(function(){
 		}
 	};
 
-	for(i=0; i <=100; i++){
+	for(i=1; i <=100; i++){
 		fbFunction([i]);
 		console.log(numbers);
 		solution.prepend(numbers);
