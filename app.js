@@ -1,31 +1,28 @@
 $(document).ready(function(){
 
-	var x;
-	var y;
 	var numbers = [];
 	var solution = $('.solutionWrapper');
 
+	var fizzBuzz = " FizzBuzz ";
+	var fizz = " Fizz ";
+	var buzz = " Buzz ";
+
 	function fbFunction(i) {
-		x = i / 3;
-		y = i / 5;
-		if( x === 3 ) {
-			numbers.push("Fizz\n");
-			solution.prepend(numbers);
-		}
-		if( y === 5 ) {
-			numbers.push("Buzz\n");
-			solution.prepend(numbers);
-		}
-		if( x === 3 && y === 5) {
-			numbers.push("FizzBuzz\n");
-			solution.prepend(numbers);
-		}
-		else {
-			numbers.push([i]);
+		if( i % 3 === 0 && i % 5 === 0) {
+			numbers.push( fizzBuzz + "<br/>");
+		} else if ( i % 3 === 0 ) {
+			numbers.push( fizz + " <br/>");
+			return undefined;
+		} else if ( i % 5 === 0 ) {
+			numbers.push( buzz + "<br/>");
+			return undefined;
+		} else {
+			numbers.push([i] + "<br/>");
+			return undefined;
 		}
 	};
 
-	for(i=0; i <=100; i++){
+	for (i=1; i <=100; i++){
 		fbFunction([i]);
 		console.log(numbers);
 		solution.prepend(numbers);
