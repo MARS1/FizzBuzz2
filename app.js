@@ -19,22 +19,21 @@ $(document).ready(function(){
 			numbers.push( buzz + "<br/>");
 		} else {
 			numbers.push([i] + "<br/>");
-		};
-	};
+		}
 
-
+	}
 
 	var iFunc = function(inputVal) {
-		for( i=0; i <=num; i++) {
+		for( i=1; i <=inputVal; i++) {
 			fbFunction(i);
 		}
 	};
 
 	$('#solutionBtn').on('click', function(){
+		$('.solutionWrapper').html("");
+		numbers = [];
 		var inputVal = $('#value').val();
-		inputVal = +inputVal;
-		$('#value').submit(function(){
-			console.log(inputVal);
-		})
-	};
+		iFunc(inputVal);
+		$('.solutionWrapper').append(numbers);
+	});
 });
