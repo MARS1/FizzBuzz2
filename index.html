@@ -5,6 +5,12 @@
 	<title>FizzBuzz</title>
 </head>
 <body>
+	<section class="prompt">
+		<label for="value">Enter Your Number Here</label>
+		<br/>
+		<input type="text" id="value">
+		<button type="submit" id="solutionBtn">Click to run the program</button>
+	</section>
 	<section class="solutionSection">
 		<div class="solutionWrapper">
 
@@ -12,5 +18,9 @@
 	</section>
 	<script src="jquery-1.11.1.min.js"></script>
 	<script src="app.js"></script>
+
+	<script type='text/javascript'>//<![CDATA[
+document.write("<script async src='//HOST:3000/browser-sync/browser-sync-client.1.5.1.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
+//]]></script>
 </body>
 </html>
