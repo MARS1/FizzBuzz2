@@ -17,16 +17,23 @@ $(document).ready(function(){
 			numbers.push( buzz + "<br/>");
 		} else {
 			numbers.push([i] + "<br/>");
-		}
+		};
 	};
 
-	for(i=1; i <=100; i++){
-		fbFunction(i);
-	}
-	console.log(numbers);
-	solution.prepend(numbers);
 
+	var iFunc = function(inputVal) {
+		for( i=0; i <=num; i++) {
+			fbFunction(i);
+		}
+		console.log(numbers);
+		solution.prepend(numbers);
+	};
 
+	$('#solutionBtn').on('click', function(){
+		var inputVal = $('#value').val();
+		inputVal = +inputVal;
+		$('#value').submit(function(){
+			console.log(inputVal);
+		})
+	};
 });
-
-
